@@ -9,6 +9,8 @@ body {
 }
 
 .main {
+    /* transform: translate(50%, 25%); */
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,9 +37,8 @@ input {
     margin: 1rem 0 0 2rem;
 }
 
-#range_num {
-    border: none;
-    transform: translate(-30px, -6px);
+.inputs {
+    min-width: 70%;
 }
 
 .compute-btn {
@@ -47,9 +48,15 @@ input {
 }
 
 .main p {
-    /* position: absolute;
-    left: 3rem;
-    top: 25rem; */
     transform: translate(-8rem, 1rem);
     font-weight: bold;
+}
+
+.yellow {
+    color: yellow;
+}
+
+#val {
+    width: 2rem;
+    margin-left: 1rem;
 }

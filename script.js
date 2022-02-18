@@ -6,6 +6,15 @@ for (let i=1;i<=100;i++){
 }
 document.getElementById("years").innerHTML = select;
 
+
+const  rateVal =  document.getElementById('rate');
+let valueBox  =  document.getElementById('val');
+valueBox.textContent = "10%";
+rateVal.addEventListener('input', function(){
+valueBox.textContent = rateVal.value;
+valueBox.textContent+="%";
+ })
+
 const computeBtn = document.getElementById("compute-btn");
 
 computeBtn.addEventListener("click",compute);
@@ -20,21 +29,28 @@ console.log(interest_rate);
 console.log(years);
 
 if(!amount){
-    alert("Enter amount first");
+    alert("Enter correct amount");
+    document.getElementById("principal").focus();
     return;
 }
 if(amount<=0){
-    alert("Enter Positibve amount");
+    alert("Enter Positive amount");
     document.getElementById("principal").value = '';
     document.getElementById("principal").focus();
-
- return;
+    return;
 }
 const ans= (amount* interest_rate * years)/100;
 const current_year = new Date();
 years +=  current_year.getFullYear();
-document.getElementById('result').innerHTML = `if you deposit <span style="color: orange;" >${amount} , <br> at an interest rate of ${interest_rate}.<br>You will receive an amount of ${ans},<br>in the year ${years}<br>`;
+document.getElementById('result').innerHTML = `if you deposit  <mark>${amount}</mark>  , <br> at an interest rate of <mark>${interest_rate}</mark>.<br>You will receive an amount of <mark> ${ans}</mark>,<br>in the year <mark>${years}</mark><br>`;
+
+
 }
+
+
+
+ 
+
 
 
 
