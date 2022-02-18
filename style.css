@@ -1,4 +1,55 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
 
+body {
+    background-color: black;
+}
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    max-width: max-content;
+    min-width: 20rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: 3px;
+    background-color: transparent;
+    margin: 1rem 0 0 2rem;
+}
+
+#range_num {
+    border: none;
+    transform: translate(-30px, -6px);
+}
+
+.compute-btn {
+    background-color: transparent;
+    padding: 3px;
+    margin-top: 1rem;
+}
+
+.main p {
+    /* position: absolute;
+    left: 3rem;
+    top: 25rem; */
+    transform: translate(-8rem, 1rem);
+    font-weight: bold;
+}
